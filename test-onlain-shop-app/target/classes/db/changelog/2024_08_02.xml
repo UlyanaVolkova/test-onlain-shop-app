@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="init db" author="volkova">
+        <sql>
+            Create table if not exists product (
+            id bigserial PRIMARY KEY,
+            product_name varchar NOT NULL,
+            price bigint NOT NULL
+            );
+
+            Insert into product(product_name, price) values
+            ('Мяч футбольный', 600),
+            ('Велосипед', 10000),
+            ('Самокат', 5000),
+            ('Коврик для йоги', 400),
+            ('Штанга', 8000);
+
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

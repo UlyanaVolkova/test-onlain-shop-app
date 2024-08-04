@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/products.css", type="text/css">
+</head>
+<body>
+<div class="container">
+    <h2>PRODUCTS</h2>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1">ID</div>
+            <div class="col col-2">PRODUCT_NAME</div>
+            <div class="col col-3">PRICE</div>
+        </li>
+        <#list products as product>
+            <li class="table-row">
+                <div class="col col-1">${product.id}</div>
+                <div class="col col-2">${product.productName}</div>
+                <div class="col col-3">${product.price}</div>
+            </li>
+        </#list>
+    </ul>
+</div>
+</body>
+</html>
